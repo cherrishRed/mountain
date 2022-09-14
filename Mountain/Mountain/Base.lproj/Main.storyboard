@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UWH-PC-9fe">
-                                <rect key="frame" x="0.0" y="133" width="414" height="439"/>
+                                <rect key="frame" x="0.0" y="133" width="414" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Ech-3h-yB5"/>
-                                    <constraint firstAttribute="width" secondItem="UWH-PC-9fe" secondAttribute="height" multiplier="414:439" id="NdQ-Qq-XZJ"/>
+                                    <constraint firstAttribute="height" constant="500" id="crd-eH-5X2"/>
                                 </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한국 명산 100개 정복하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-M8-vd6">
@@ -29,19 +29,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z6i-8I-Bv1">
+                                <rect key="frame" x="50" y="704" width="314" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산 정복 현황" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQK-7A-h2c">
+                                <rect key="frame" x="20" y="653" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="z6i-8I-Bv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="33C-cU-zgp"/>
+                            <constraint firstItem="z6i-8I-Bv1" firstAttribute="top" secondItem="cQK-7A-h2c" secondAttribute="bottom" constant="30" id="7Bs-LI-g2K"/>
                             <constraint firstItem="EGt-M8-vd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7De-zR-K3a"/>
+                            <constraint firstItem="cQK-7A-h2c" firstAttribute="top" secondItem="UWH-PC-9fe" secondAttribute="bottom" constant="20" id="Djd-7S-ufF"/>
                             <constraint firstItem="UWH-PC-9fe" firstAttribute="top" secondItem="EGt-M8-vd6" secondAttribute="bottom" constant="30" id="bTm-Vd-2qj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z6i-8I-Bv1" secondAttribute="trailing" constant="50" id="d7F-7a-zs8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGt-M8-vd6" secondAttribute="trailing" id="dKP-np-zDH"/>
                             <constraint firstItem="EGt-M8-vd6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="emP-fL-4yc"/>
+                            <constraint firstItem="cQK-7A-h2c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kBV-Zd-wNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cQK-7A-h2c" secondAttribute="trailing" constant="20" id="qgP-ah-oY9"/>
                             <constraint firstItem="UWH-PC-9fe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wRX-Cz-XxP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mountainMap" destination="UWH-PC-9fe" id="Ohs-zV-5tb"/>
+                        <outlet property="progressBar" destination="z6i-8I-Bv1" id="vrf-pn-8Jf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

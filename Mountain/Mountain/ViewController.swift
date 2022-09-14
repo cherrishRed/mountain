@@ -15,13 +15,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
   
     let service: Service = Service()
     lazy var currentMountain: Mountain = service.mountainsData[0]
+    var progressValue: Double = 0.0
   
     @IBOutlet weak var mountainMap: MKMapView!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mountainMap.delegate = self
         setUpMapImage()
+        progressBar.progress = 0
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -55,12 +58,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let filteredMountain = service.mountainsData.filter { $0.title == labelTitle }
     
     guard let index = service.mountainsData.firstIndex(of: filteredMountain[0]) else { return }
+    let clear = service.mountainsData[index].clear
+    
     service.mountainsData[index].clear.toggle()
     mountainMap.reloadInputViews()
     print("일단 되나 보자")
     print(labelTitle)
     
+    if clear == false {
+      progressValue += 0.01
+    } else {
+      progressValue -= 0.01
+    }
+    
     updateAnnotations(title: labelTitle)
+    progressBar.setProgress(Float(progressValue), animated: true)
   }
   
   private func updateAnnotations(title: String){
@@ -74,7 +86,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mountainMap.addAnnotation(annotation)
   }
   
-  
   func setUpMapImage() {
     var marks: [MapMarker] = []
     marks = service.mountainsData.map { (mountain: Mountain) -> MapMarker in
@@ -83,12 +94,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     for m in marks {
       mountainMap.addAnnotation(m)
     }
-    
-    print("정보개수 \(service.mountainsData.count)")
-  }
-  
-  func changeData() {
-    
   }
 
 }
