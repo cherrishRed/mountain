@@ -12,6 +12,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let mark = MapMarker(title: "",
                          subtitle: "",
                          coordinate: CLLocationCoordinate2D(latitude: 37.55769, longitude: 126.92450))
+  let service: Service = Service()
 
     @IBOutlet weak var mountainMap: MKMapView!
     
@@ -41,7 +42,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
 }
 
-extension UIImage {
   func resize(newWidth: CGFloat, newHeight: CGFloat) -> UIImage {
         let size = CGSize(width: newWidth, height: newHeight)
         let render = UIGraphicsImageRenderer(size: size)
