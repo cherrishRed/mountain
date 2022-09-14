@@ -42,6 +42,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
 }
 
+extension UIImage {
   func resize(newWidth: CGFloat, newHeight: CGFloat) -> UIImage {
         let size = CGSize(width: newWidth, height: newHeight)
         let render = UIGraphicsImageRenderer(size: size)
