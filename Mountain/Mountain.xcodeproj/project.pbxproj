@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CDDF1EE28D1590C0067F85C /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDF1ED28D1590C0067F85C /* MapMarker.swift */; };
 		DAE6DEAA28D150F000BF61FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEA928D150F000BF61FD /* AppDelegate.swift */; };
 		DAE6DEAC28D150F000BF61FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEAB28D150F000BF61FD /* SceneDelegate.swift */; };
 		DAE6DEAE28D150F000BF61FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEAD28D150F000BF61FD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CDDF1ED28D1590C0067F85C /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		DAE6DEA628D150F000BF61FD /* Mountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE6DEA928D150F000BF61FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE6DEAB28D150F000BF61FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DAE6DEA928D150F000BF61FD /* AppDelegate.swift */,
 				DAE6DEAB28D150F000BF61FD /* SceneDelegate.swift */,
 				DAE6DEAD28D150F000BF61FD /* ViewController.swift */,
+				0CDDF1ED28D1590C0067F85C /* MapMarker.swift */,
 				DAE6DEAF28D150F000BF61FD /* Main.storyboard */,
 				DAE6DEB228D150F300BF61FD /* Assets.xcassets */,
 				DAE6DEB428D150F300BF61FD /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				DAE6DEAE28D150F000BF61FD /* ViewController.swift in Sources */,
 				DAE6DEAA28D150F000BF61FD /* AppDelegate.swift in Sources */,
+				0CDDF1EE28D1590C0067F85C /* MapMarker.swift in Sources */,
 				DAE6DEAC28D150F000BF61FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
