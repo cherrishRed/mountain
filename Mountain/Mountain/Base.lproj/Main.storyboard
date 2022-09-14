@@ -16,29 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b0z-lK-Vgc">
-                                <rect key="frame" x="20" y="111" width="374" height="597"/>
-                            </mapView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHd-6Z-zAq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hp9-tz-3gs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="Hp9-tz-3gs" firstAttribute="width" secondItem="SMS-Ud-GeV" secondAttribute="width" id="6VC-rA-0un"/>
+                                    <constraint firstItem="Hp9-tz-3gs" firstAttribute="bottom" secondItem="2OQ-Rx-Ici" secondAttribute="bottom" constant="490" id="Cf6-hF-i8X"/>
+                                    <constraint firstItem="Hp9-tz-3gs" firstAttribute="trailing" secondItem="2OQ-Rx-Ici" secondAttribute="trailing" constant="327" id="MBm-S8-mzF"/>
+                                    <constraint firstItem="Hp9-tz-3gs" firstAttribute="top" secondItem="2OQ-Rx-Ici" secondAttribute="top" constant="362" id="WiP-VJ-maP"/>
+                                    <constraint firstItem="Hp9-tz-3gs" firstAttribute="leading" secondItem="2OQ-Rx-Ici" secondAttribute="leading" id="c10-Tn-dO8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="2OQ-Rx-Ici"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="SMS-Ud-GeV"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b0z-lK-Vgc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="3Ef-1U-GZ3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b0z-lK-Vgc" secondAttribute="bottom" constant="154" id="U7k-u9-5H4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b0z-lK-Vgc" secondAttribute="trailing" constant="20" id="WWC-pg-Xfc"/>
-                            <constraint firstItem="b0z-lK-Vgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nEM-Bx-Pl1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XHd-6Z-zAq" secondAttribute="trailing" id="4bA-JJ-nWg"/>
+                            <constraint firstItem="XHd-6Z-zAq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6rJ-Eo-O2t"/>
+                            <constraint firstItem="XHd-6Z-zAq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZyK-Zg-mE7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XHd-6Z-zAq" secondAttribute="bottom" id="i3m-fv-wvz"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="mountainMap" destination="b0z-lK-Vgc" id="veT-lv-Ebb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="84"/>
+            <point key="canvasLocation" x="207.24637681159422" y="80.357142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
