@@ -50,7 +50,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
       if filteredMountain[0].clear == true {
         annotationView?.image = UIImage(named: "mountainGreen")?.resize(newWidth: 20, newHeight: 20)
       } else {
-        annotationView?.image = UIImage(named: "mountain")?.resize(newWidth: 20, newHeight: 20)
+        annotationView?.image = UIImage(named: "mountainDeep")?.resize(newWidth: 20, newHeight: 20)
       }
         return annotationView
     }
