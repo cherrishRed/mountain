@@ -16,7 +16,6 @@
 		DAE6DEB128D150F000BF61FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE6DEAF28D150F000BF61FD /* Main.storyboard */; };
 		DAE6DEB328D150F300BF61FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE6DEB228D150F300BF61FD /* Assets.xcassets */; };
 		DAE6DEB628D150F300BF61FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE6DEB428D150F300BF61FD /* LaunchScreen.storyboard */; };
-		DAE6DEED28D1683600BF61FD /* Mountain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEEC28D1683600BF61FD /* Mountain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE6DEED28D1683600BF61FD /* Mountain.swift in Sources */,
 				0CDDF1F328D1707D0067F85C /* Service.swift in Sources */,
 				DAE6DEAE28D150F000BF61FD /* ViewController.swift in Sources */,
 				DAE6DEAA28D150F000BF61FD /* AppDelegate.swift in Sources */,
