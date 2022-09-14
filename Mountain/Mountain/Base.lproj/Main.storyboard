@@ -31,9 +31,16 @@
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z6i-8I-Bv1">
                                 <rect key="frame" x="50" y="704" width="314" height="4"/>
+                                <color key="progressTintColor" red="0.35567814110000001" green="0.77115911250000002" blue="0.46076506379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산 정복 현황" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQK-7A-h2c">
                                 <rect key="frame" x="20" y="653" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7V-Vw-QMv">
+                                <rect key="frame" x="194" y="724" width="26" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +56,9 @@
                             <constraint firstItem="UWH-PC-9fe" firstAttribute="top" secondItem="EGt-M8-vd6" secondAttribute="bottom" constant="30" id="bTm-Vd-2qj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z6i-8I-Bv1" secondAttribute="trailing" constant="50" id="d7F-7a-zs8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGt-M8-vd6" secondAttribute="trailing" id="dKP-np-zDH"/>
+                            <constraint firstItem="i7V-Vw-QMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dkj-hr-FMk"/>
                             <constraint firstItem="EGt-M8-vd6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="emP-fL-4yc"/>
+                            <constraint firstItem="i7V-Vw-QMv" firstAttribute="top" secondItem="z6i-8I-Bv1" secondAttribute="bottom" constant="16" id="hdX-pX-F0Q"/>
                             <constraint firstItem="cQK-7A-h2c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kBV-Zd-wNA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cQK-7A-h2c" secondAttribute="trailing" constant="20" id="qgP-ah-oY9"/>
                             <constraint firstItem="UWH-PC-9fe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wRX-Cz-XxP"/>
@@ -58,6 +67,7 @@
                     <connections>
                         <outlet property="mountainMap" destination="UWH-PC-9fe" id="Ohs-zV-5tb"/>
                         <outlet property="progressBar" destination="z6i-8I-Bv1" id="vrf-pn-8Jf"/>
+                        <outlet property="progressBarValueLabel" destination="i7V-Vw-QMv" id="M2P-eG-1vr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

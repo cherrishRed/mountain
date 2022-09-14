@@ -16,15 +16,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let service: Service = Service()
     lazy var currentMountain: Mountain = service.mountainsData[0]
     var progressValue: Double = 0.0
-  
+
     @IBOutlet weak var mountainMap: MKMapView!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressBarValueLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mountainMap.delegate = self
         setUpMapImage()
         progressBar.progress = 0
+        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 4)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -71,6 +73,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
       progressValue -= 0.01
     }
     
+    progressBarValueLabel.text = "\(Int(progressValue * 100))%"
     updateAnnotations(title: labelTitle)
     progressBar.setProgress(Float(progressValue), animated: true)
   }
