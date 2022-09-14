@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
+  let service: Service = Service()
 
     @IBOutlet weak var mountainMap: MKMapView!
     
