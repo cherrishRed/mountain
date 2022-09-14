@@ -40,8 +40,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
                        miniButton.tintColor = .blue
                        annotationView?.rightCalloutAccessoryView = miniButton
         }
+      
+      
         
         annotationView?.image = UIImage(named: "mountain")?.resize(newWidth: 20, newHeight: 20)
+      
+      
         return annotationView
     }
   
@@ -62,6 +66,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //      mountainImageView.image = UIImage(named: currentMountain.imageName)?.resize(newWidth: 250, newHeight: 250)
       mountainTitle.text = currentMountain.title
     }
+  
+  func changeData() {
+    
+  }
 
 }
 
