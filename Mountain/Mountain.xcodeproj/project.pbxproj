@@ -10,6 +10,7 @@
 		0CDDF1EE28D1590C0067F85C /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDF1ED28D1590C0067F85C /* MapMarker.swift */; };
 		0CDDF1F128D170620067F85C /* Mountain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDF1F028D170620067F85C /* Mountain.swift */; };
 		0CDDF1F328D1707D0067F85C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDF1F228D1707D0067F85C /* Service.swift */; };
+		0CDDF1F728D1A8310067F85C /* DeogonPrincess.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDF1F628D1A8220067F85C /* DeogonPrincess.otf */; };
 		DAE6DEAA28D150F000BF61FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEA928D150F000BF61FD /* AppDelegate.swift */; };
 		DAE6DEAC28D150F000BF61FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEAB28D150F000BF61FD /* SceneDelegate.swift */; };
 		DAE6DEAE28D150F000BF61FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DEAD28D150F000BF61FD /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		0CDDF1ED28D1590C0067F85C /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		0CDDF1F028D170620067F85C /* Mountain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain.swift; sourceTree = "<group>"; };
 		0CDDF1F228D1707D0067F85C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0CDDF1F628D1A8220067F85C /* DeogonPrincess.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DeogonPrincess.otf; path = ../../../../../Downloads/DeogonPrincess_OTF/DeogonPrincess.otf; sourceTree = "<group>"; };
 		DAE6DEA628D150F000BF61FD /* Mountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE6DEA928D150F000BF61FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE6DEAB28D150F000BF61FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DAE6DEB228D150F300BF61FD /* Assets.xcassets */,
 				DAE6DEB428D150F300BF61FD /* LaunchScreen.storyboard */,
 				DAE6DEB728D150F300BF61FD /* Info.plist */,
+				0CDDF1F628D1A8220067F85C /* DeogonPrincess.otf */,
 			);
 			path = Mountain;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDDF1F728D1A8310067F85C /* DeogonPrincess.otf in Resources */,
 				DAE6DEB628D150F300BF61FD /* LaunchScreen.storyboard in Resources */,
 				DAE6DEB328D150F300BF61FD /* Assets.xcassets in Resources */,
 				DAE6DEB128D150F000BF61FD /* Main.storyboard in Resources */,

@@ -16,10 +16,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let service: Service = Service()
     lazy var currentMountain: Mountain = service.mountainsData[0]
     var progressValue: Double = 0.0
-
+    
+    @IBOutlet weak var mainTitleLabel: UILabel!
     @IBOutlet weak var mountainMap: MKMapView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var progressBarValueLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         setUpMapImage()
         progressBar.progress = 0
         progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 4)
+        mainTitleLabel.text = "한국 명산 100개 정복하기"
+        mainTitleLabel.font = UIFont(name: "DeogonPrincess", size: 30)
+        subTitleLabel.text = "산 정복 현황"
+        subTitleLabel.font = UIFont(name: "DeogonPrincess", size: 20)
+        progressBarValueLabel.font = UIFont(name: "DeogonPrincess", size: 20)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
