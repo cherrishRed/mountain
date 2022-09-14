@@ -17,14 +17,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     lazy var currentMountain: Mountain = service.mountainsData[0]
   
     @IBOutlet weak var mountainMap: MKMapView!
-    @IBOutlet weak var mountainImageView: UIImageView!
-    @IBOutlet weak var mountainTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mountainMap.delegate = self
         setUpMapImage()
-        setData()
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -89,11 +86,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     print("정보개수 \(service.mountainsData.count)")
   }
-  
-    func setData() {
-      mountainImageView.image = UIImage(systemName: "swift")?.resize(newWidth: 250, newHeight: 250)
-      mountainTitle.text = currentMountain.title
-    }
   
   func changeData() {
     
