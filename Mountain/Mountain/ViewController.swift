@@ -29,25 +29,54 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView = self.mountainMap.dequeueReusableAnnotationView(withIdentifier: "Custom")
-        
+      
         if annotationView == nil {
                     //없으면 하나 만들어 주시고
                     annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "Custom")
                     annotationView?.canShowCallout = true
             
             let miniButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-                       miniButton.setImage(UIImage(systemName: "person"), for: .normal)
-                       miniButton.tintColor = .blue
+                       miniButton.titleLabel?.text = annotation.title ?? "이상한 값"
+                       miniButton.setImage(UIImage(systemName: "flag.fill"), for: .normal)
+                       miniButton.tintColor = #colorLiteral(red: 0.8456967473, green: 0.3694105148, blue: 0.2398990095, alpha: 1)
                        annotationView?.rightCalloutAccessoryView = miniButton
+                miniButton.addTarget(self, action: #selector(touchUpFlagButton(_:)), for: .touchUpInside)
+                miniButton.tag = 1
         }
+      let filteredMountain = service.mountainsData.filter { $0.title == annotation.title }
       
-      
-        
+      if filteredMountain[0].clear == true {
+        annotationView?.image = UIImage(named: "mountainGreen")?.resize(newWidth: 20, newHeight: 20)
+      } else {
         annotationView?.image = UIImage(named: "mountain")?.resize(newWidth: 20, newHeight: 20)
-      
-      
+      }
         return annotationView
     }
+  
+  @objc func touchUpFlagButton(_ sender: UIButton) {
+    let labelTitle = sender.titleLabel?.text ?? "NOPE"
+    let filteredMountain = service.mountainsData.filter { $0.title == labelTitle }
+    
+    guard let index = service.mountainsData.firstIndex(of: filteredMountain[0]) else { return }
+    service.mountainsData[index].clear.toggle()
+    mountainMap.reloadInputViews()
+    print("일단 되나 보자")
+    print(labelTitle)
+    
+    updateAnnotations(title: labelTitle)
+  }
+  
+  private func updateAnnotations(title: String){
+    let filteredAnnotation = mountainMap.annotations.filter { annotation in
+      let anotationTitle = annotation.title ?? ""
+      return anotationTitle == title
+    }
+    
+    let annotation = filteredAnnotation[0]
+    mountainMap.removeAnnotation(filteredAnnotation[0])
+    mountainMap.addAnnotation(annotation)
+  }
+  
   
   func setUpMapImage() {
     var marks: [MapMarker] = []
@@ -63,7 +92,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
   
     func setData() {
       mountainImageView.image = UIImage(systemName: "swift")?.resize(newWidth: 250, newHeight: 250)
-//      mountainImageView.image = UIImage(named: currentMountain.imageName)?.resize(newWidth: 250, newHeight: 250)
       mountainTitle.text = currentMountain.title
     }
   
@@ -82,4 +110,9 @@ extension UIImage {
         }
         return renderImage
     }
+}
+
+class
+  Annotation: MKPointAnnotation {
+    var index = 0
 }
