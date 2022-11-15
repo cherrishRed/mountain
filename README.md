@@ -1,15 +1,22 @@
 # 정복
 
 > 🏆 [야곰 아카데미 해커톤](https://www.yagom-academy.kr/blog/40)
+
 > 주제 : 산
+
 > 기간: 2022/09/30 오전 8시 ~ 오후 3시 30분
+
 > 팀원: [RED](https://github.com/cherrishRed), [Hamo](https://github.com/lxodud)
 
 <img src="https://i.imgur.com/2tm6a8n.png" width="400">
 
 ### 제출한 앱 소개 
 
+야아톤 인기상을 수상했습니다
+
 **⛰정복**
+
+**🥈 인기상 수상**
 
 <img src="https://i.imgur.com/iBvhYOM.png" width="200">
 
